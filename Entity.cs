@@ -8,4 +8,37 @@ public class Entity
 {
     private readonly string textureName;
     protected readonly Sprite sprite;
+    public bool isDead;
+
+    protected Entity(string textureName)
+    {
+        this.textureName = textureName;
+        sprite = new Sprite();
+    }
+    
+    public Vector2f Position
+    {
+      get  => sprite.Position;
+      set => sprite.Position = value;
+    }
+
+    public FloatRect Bounds => sprite.GetGlobalBounds();
+    
+    public virtual bool Solid => false;
+
+    public virtual void Update(Scene scene, float deltatime)
+    {
+        
+    }
+
+    public virtual void Create(Scene scene)
+    {
+        sprite.Texture = scene.assets.LoadTexture(textureName);
+    }
+
+    public virtual void Render(RenderTarget target)
+    {
+        target.Draw(sprite);
+    }
+
 }
