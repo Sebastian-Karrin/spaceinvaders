@@ -1,6 +1,10 @@
-﻿namespace SpaceInvaders;
+﻿using SFML.Graphics;
+using SFML.Window;
+using SFML.System;
 
-public class EnemyShip : Entity
+namespace SpaceInvaders;
+
+public class EnemyShip : Actor
 {
     public EnemyShip() : base()
     {
