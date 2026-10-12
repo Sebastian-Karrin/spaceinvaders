@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {
       "CSFML/2.5.0": {
@@ -461,19 +461,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a26sebka\\.nuget\\packages\\": {}
+    "C:\\Users\\bebbe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a26sebka\\OneDrive - Högskolan i Skövde\\Documents\\spaceinvaders\\spaceinvaders.csproj",
+      "projectUniqueName": "C:\\Users\\bebbe\\Documents\\GitHub\\spaceinvaders\\spaceinvaders.csproj",
       "projectName": "spaceinvaders",
-      "projectPath": "C:\\Users\\a26sebka\\OneDrive - Högskolan i Skövde\\Documents\\spaceinvaders\\spaceinvaders.csproj",
-      "packagesPath": "C:\\Users\\a26sebka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\a26sebka\\OneDrive - Högskolan i Skövde\\Documents\\spaceinvaders\\obj\\",
+      "projectPath": "C:\\Users\\bebbe\\Documents\\GitHub\\spaceinvaders\\spaceinvaders.csproj",
+      "packagesPath": "C:\\Users\\bebbe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bebbe\\Documents\\GitHub\\spaceinvaders\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\a26sebka\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\bebbe\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -483,6 +483,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {}
         }
@@ -501,6 +502,7 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "CSFML": {
@@ -528,7 +530,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -1,6 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.Window;
 using SFML.System;
+using System.Collections.Generic;
 
 namespace SpaceInvaders
 {
@@ -12,17 +13,20 @@ namespace SpaceInvaders
             scene.assets.LoadTexture("this");
 
             using (var window = new RenderWindow(
-                       new VideoMode(800, 900), "SpaceInvaders"))
+                       new VideoMode(1000, 1000), "SpaceInvaders"))
             {
                 window.Closed += (o, e) => window.Close();
-                
                 Clock clock = new Clock();
                 while (window.IsOpen)
                 {
-                    window.DispatchEvents();
+                   
                     float deltatime = clock.Restart().AsSeconds();
                     deltatime = MathF.Min(deltatime, 0.1f);
+                    if (deltatime > 0.1f) deltatime = 0.1f;
+                    window.DispatchEvents();
+                    scene.Update(deltatime);
                     window.Clear(new Color(255, 255, 255));
+                    scene.Render(window);
                     window.Display();
                 }
             }

@@ -36,6 +36,11 @@ public class Entity
         sprite.Texture = scene.assets.LoadTexture(textureName);
     }
 
+    public virtual void Destroy(Scene scene)
+    {
+        
+    }
+
     public virtual void Render(RenderTarget target)
     {
         target.Draw(sprite);
