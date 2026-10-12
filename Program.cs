@@ -10,10 +10,10 @@ namespace SpaceInvaders
         static void Main(string[] args)
         {
             Scene scene = new Scene();
-            scene.assets.LoadTexture("this");
+            scene.assets.LoadTexture("InvadersSpriteSheet_byOttoC");
 
             using (var window = new RenderWindow(
-                       new VideoMode(1000, 1000), "SpaceInvaders"))
+                       new VideoMode(1920, 1080), "SpaceInvaders"))
             {
                 window.Closed += (o, e) => window.Close();
                 Clock clock = new Clock();
