@@ -13,4 +13,16 @@ public class AssetLoader
         textures = new Dictionary<string, Texture>();
         fonts = new Dictionary<string, Font>();
     }
+
+    public Texture LoadTexture(string name)
+    {
+        if (textures.TryGetValue(name, out Texture found))
+        {
+            return found;
+        }
+        string textureName = ($"assets/{name}.png");
+        Texture texture = textures[textureName];
+        textures.Add(textureName, texture);
+        return texture;
+    }
 }
