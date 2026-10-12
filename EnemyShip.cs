@@ -1,6 +1,9 @@
 ﻿namespace SpaceInvaders;
 
-public class EnemyShip
+public class EnemyShip : Entity
 {
-    
+    public EnemyShip() : base()
+    {
+        
+    }    
 }

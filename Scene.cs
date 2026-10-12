@@ -21,7 +21,7 @@ public class Scene
         for (int i = entities.Count - 1; i >= 0; i--)
         {
             Entity entity = entities[i];
-            entity.Update(this, deltatime);
+            
         }
     }
 }
