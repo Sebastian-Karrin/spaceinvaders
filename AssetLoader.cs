@@ -6,7 +6,7 @@ namespace SpaceInvaders;
 
 public class AssetLoader
 {
-    public static readonly string AssetPath = "assets";
+    public static readonly string AssetPath = "assets/AllAssets/Spritesheet/sheet";
     private readonly Dictionary<string, Texture> textures;
     private readonly Dictionary<string, Font> fonts;
 
@@ -22,7 +22,7 @@ public class AssetLoader
         {
             return found;
         }
-        string textureName = ($"assets/SheetbyOttoC.png");
+        string textureName = ($"{AssetPath}/{name}.png");
         Texture texture = textures[textureName];
         textures.Add(textureName, texture);
         return texture;

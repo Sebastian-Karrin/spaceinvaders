@@ -6,6 +6,8 @@ namespace SpaceInvaders;
 
 public class EnemyShip : Actor
 {
+    public Vector2f direction = new Vector2f(1, 1) / MathF.Sqrt(2.0f);
+    
     public EnemyShip() : base()
     {
         sprite.TextureRect = new IntRect(0, 0,18, 18);
@@ -16,5 +18,13 @@ public class EnemyShip : Actor
     public override void Render(RenderTarget target)
     {
        base.Render(target);
+    }
+
+    public override void Update(Scene scene, float deltatime)
+    {
+        base.Update(scene, deltatime);
+        var newpos = sprite.Position;
+        newpos += direction * deltatime * 100.0f;
+        sprite.Position = newpos;
     }
 }
