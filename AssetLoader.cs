@@ -22,9 +22,11 @@ public class AssetLoader
         {
             return found;
         }
-        string textureName = ($"assets/{name}.png");
+        string textureName = ($"assets/SheetbyOttoC.png");
         Texture texture = textures[textureName];
         textures.Add(textureName, texture);
         return texture;
     }
+
+    
 }

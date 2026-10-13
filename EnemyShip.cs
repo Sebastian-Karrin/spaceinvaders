@@ -8,7 +8,13 @@ public class EnemyShip : Actor
 {
     public EnemyShip() : base()
     {
-        sprite.TextureRect = new IntRect(0, 0,16, 16);
-        sprite.Origin = new Vector2f(8,8);
-    }    
+        sprite.TextureRect = new IntRect(0, 0,18, 18);
+        sprite.Origin = new Vector2f(9,9);
+        sprite.Position = new Vector2f(300,300);
+    }
+
+    public override void Render(RenderTarget target)
+    {
+       base.Render(target);
+    }
 }

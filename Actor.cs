@@ -23,4 +23,9 @@ public class Actor : Entity
     {
         base.Update(scene, deltaTime);
     }
+
+    public override void Render(RenderTarget target)
+    {
+        base.Render(target);
+    }
 }

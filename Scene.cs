@@ -8,6 +8,7 @@ public class Scene
 {
     private List<Entity> entities;
     public readonly AssetLoader assets;
+    public bool gameOver;
 
     public Scene() //Constructorn
     {
