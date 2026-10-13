@@ -10,7 +10,7 @@ namespace SpaceInvaders
         static void Main(string[] args)
         {
             Scene scene = new Scene();
-            scene.assets.LoadTexture("InvadersSpriteSheet_byOttoC");
+            scene.assets.LoadTexture("SheetbyOttoC");
 
             using (var window = new RenderWindow(
                        new VideoMode(1920, 1080), "SpaceInvaders"))
@@ -25,7 +25,7 @@ namespace SpaceInvaders
                     if (deltatime > 0.1f) deltatime = 0.1f;
                     window.DispatchEvents();
                     scene.Update(deltatime);
-                    window.Clear(new Color(255, 255, 255));
+                    window.Clear(new Color(10, 10, 50));
                     scene.Render(window);
                     window.Display();
                 }
