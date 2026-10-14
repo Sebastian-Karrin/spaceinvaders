@@ -8,7 +8,7 @@ public class Background :Entity
 {
     public Background() : base("darkPurple")
     {
-        
+        sprite.Scale = new Vector2f(0.5f, 0.5f);
     }
 
     public override void Render(RenderTarget target)

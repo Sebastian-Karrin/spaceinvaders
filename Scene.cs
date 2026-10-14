@@ -25,7 +25,7 @@ public class Scene
         entity.Create(this);
     }
 
-    public void Update(float deltatime) //Uppdaterar allting i entities listan
+    public void UpdateAll(float deltatime) //Uppdaterar allting i entities listan
     {
        loader.LoadScene(this);
         for (int i = entities.Count - 1; i >= 0; i--)
@@ -41,7 +41,7 @@ public class Scene
         }
     }
 
-    public void Render(RenderTarget target) //Renderar allting från entities listan
+    public void RenderAll(RenderTarget target) //Renderar allting från entities listan
     {
         for (int i = 0;  i < entities.Count; i++)
         {

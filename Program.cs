@@ -24,9 +24,9 @@ namespace SpaceInvaders
                     deltatime = MathF.Min(deltatime, 0.1f);
                     if (deltatime > 0.1f) deltatime = 0.1f;
                     window.DispatchEvents();
-                    scene.Update(deltatime);
-                    window.Clear(new Color(10, 10, 50));
-                    scene.Render(window);
+                    scene.UpdateAll(deltatime);
+                    window.Clear();
+                    scene.RenderAll(window);
                     window.Display();
                 }
             }
