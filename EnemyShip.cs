@@ -8,10 +8,8 @@ public class EnemyShip : Actor
 {
     public Vector2f direction = new Vector2f(1, 1) / MathF.Sqrt(2.0f);
     
-    public EnemyShip() : base()
+    public EnemyShip() : base("playerShip1_red")
     {
-        sprite.TextureRect = new IntRect(0, 0,18, 18);
-        sprite.Origin = new Vector2f(9,9);
         sprite.Position = new Vector2f(300,300);
     }
 
@@ -22,7 +20,11 @@ public class EnemyShip : Actor
 
     public override void Update(Scene scene, float deltatime)
     {
-        base.Update(scene, deltatime);
+        if (!isDead)
+        {
+            scene.Spawn(this);
+            Console.WriteLine("din mamma");
+        }
         var newpos = sprite.Position;
         newpos += direction * deltatime * 100.0f;
         sprite.Position = newpos;

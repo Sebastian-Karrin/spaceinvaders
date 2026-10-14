@@ -6,7 +6,7 @@ namespace SpaceInvaders;
 
 public class AssetLoader
 {
-    public static readonly string AssetPath = "assets/AllAssets/Spritesheet/sheet";
+    public static readonly string AssetPath = "assets/AllAssets/PNG";
     private readonly Dictionary<string, Texture> textures;
     private readonly Dictionary<string, Font> fonts;
 

@@ -8,6 +8,7 @@ public class Scene
 {
     private List<Entity> entities;
     public readonly AssetLoader assets;
+    public readonly SceneLoader loader;
     public bool gameOver;
 
     public Scene() //Constructorn
@@ -24,10 +25,17 @@ public class Scene
 
     public void Update(float deltatime) //Uppdaterar allting i entities listan
     {
+       
         for (int i = entities.Count - 1; i >= 0; i--)
         {
             Entity entity = entities[i];
-            
+            entity.Update(this, deltatime);
+        }
+        for(int i = 0; i < entities.Count;)
+        {
+            Entity entity = entities[i];
+            if (entity.isDead) entities.RemoveAt(i);
+            else i++;
         }
     }
 
@@ -61,6 +69,7 @@ public class Scene
                 yield return entity;
             }
         }
+        
     }
 
     public bool FindByType<T>(out T found) where T : Entity

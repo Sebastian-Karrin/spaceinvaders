@@ -14,6 +14,7 @@ public class Entity
     {
         this.textureName = textureName;
         sprite = new Sprite();
+        isDead = false;
     }
     
     public Vector2f Position

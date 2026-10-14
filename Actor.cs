@@ -8,9 +8,11 @@ public class Actor : Entity
 {
     protected float speed;
     protected int direction;
+    public string textureName2;
     
-    public Actor() : base("SpaceInvaders")
+    public Actor(string textureName2) : base($"{textureName2}")
     {
+        this.textureName2 = textureName2;
         Position = new Vector2f();
     }
 
