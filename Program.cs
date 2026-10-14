@@ -17,19 +17,16 @@ namespace SpaceInvaders
                 window.Closed += (o, e) => window.Close();
                 Clock clock = new Clock();
                 Scene scene = new Scene();
-                
+                if(scene.loader != null) scene.loader.Load("scene");
                 while (window.IsOpen)
                 {
-                    
                     float deltatime = clock.Restart().AsSeconds();
                     deltatime = MathF.Min(deltatime, 0.1f);
                     if (deltatime > 0.1f) deltatime = 0.1f;
                     window.DispatchEvents();
                     scene.Update(deltatime);
-                   
                     window.Clear(new Color(10, 10, 50));
                     scene.Render(window);
-                    
                     window.Display();
                 }
             }

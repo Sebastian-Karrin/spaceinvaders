@@ -17,15 +17,15 @@ public class SceneLoader
     {
         scene.Clear();
         Create(scene, out Entity createdEntity);
-        Vector2f position = new Vector2f(new Random().Next(0, 1000), new Random().Next(0, 1000));
-        createdEntity.Position = position;
-        scene.Spawn(createdEntity);
+        Vector2f position = new Vector2f(400, 400);
+        if (createdEntity != null)
+        {
+            createdEntity.Position = position;
+            scene.Spawn(createdEntity);
+        }
     }
 
-    public void Load(string scene)
-    {
-        
-    }
+    public void Load(string scene) => nextscene = scene;
 
     public void Reload()
     {

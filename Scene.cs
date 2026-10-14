@@ -14,7 +14,9 @@ public class Scene
     public Scene() //Constructorn
     {
         entities = new List<Entity>();
+        loader = new SceneLoader();
         assets = new AssetLoader();
+        gameOver = false;
     }
     
     public void Spawn(Entity entity) //Lägger till alla entities i entities listan sen creatar
@@ -25,7 +27,7 @@ public class Scene
 
     public void Update(float deltatime) //Uppdaterar allting i entities listan
     {
-       
+       loader.LoadScene(this);
         for (int i = entities.Count - 1; i >= 0; i--)
         {
             Entity entity = entities[i];
