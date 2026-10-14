@@ -1,3 +1,7 @@
+/obj
+/bin
+/.idea
+/.git
 /obj/Debug/net10.0/apphost.exe
 /bin/Debug/net10.0/runtimes/win-x64/native/csfml-Audio.dll
 /bin/Debug/net10.0/runtimes/win-x86/native/csfml-Audio.dll
