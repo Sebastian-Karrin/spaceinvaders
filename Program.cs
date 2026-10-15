@@ -17,7 +17,7 @@ namespace SpaceInvaders
                 window.Closed += (o, e) => window.Close();
                 Clock clock = new Clock();
                 Scene scene = new Scene();
-                if(scene.loader != null) scene.loader.Load("scene");
+                if(scene.loader != null) scene.loader.Load("yes");
                 while (window.IsOpen)
                 {
                     float deltatime = clock.Restart().AsSeconds();

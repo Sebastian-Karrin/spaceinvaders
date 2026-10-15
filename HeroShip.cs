@@ -1,6 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.Window;
 using SFML.System;
+using System.Collections.Generic;
 
 namespace SpaceInvaders;
 
@@ -8,7 +9,7 @@ public class HeroShip : Actor
 {
     public Vector2f direction = new Vector2f(1, 1) / MathF.Sqrt(2.0f);
     
-    public HeroShip() : base("enemyBlack3")
+    public HeroShip() : base("playerShip1_blue")
     {
         sprite.Origin = new Vector2f(0,0);
         sprite.Position = new Vector2f(500, 500);

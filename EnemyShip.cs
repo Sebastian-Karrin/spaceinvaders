@@ -8,7 +8,7 @@ public class EnemyShip : Actor
 {
     public Vector2f direction = new Vector2f(1, 1) / MathF.Sqrt(2.0f);
     
-    public EnemyShip() : base("playerShip1_red")
+    public EnemyShip() : base("enemyBlack3")
     {
         sprite.Position = new Vector2f(300,300);
     }

@@ -6,26 +6,28 @@ namespace SpaceInvaders;
 
 public class SceneLoader
 {
-    private string currentscene = "", nextscene = "";
+    private string currentScene = "", nextScene = "";
     
     public SceneLoader()
     {
         
     }
 
-    public void LoadScene(Scene scene)
+    public void HandleSceneChange(Scene scene)
     {
         scene.Clear();
         Create(scene, out Entity createdEntity);
-        Vector2f position = new Vector2f(400, 400);
+        Vector2f position = new Vector2f(0,0);
         if (createdEntity != null)
         {
             createdEntity.Position = position;
             scene.Spawn(createdEntity);
         }
+        currentScene = nextScene; //uppdaterar currentScene som samma värde som nextScene
+      
     }
 
-    public void Load(string scene) => nextscene = scene;
+    public void Load(string scene) => nextScene = scene;
 
     public void Reload()
     {
@@ -34,14 +36,19 @@ public class SceneLoader
 
     private bool Create(Scene scene, out Entity createdEntity)
     {
-        if (scene.FindByType<HeroShip>(out _))
+        if (!scene.FindByType<HeroShip>(out _))
         {
             createdEntity = new HeroShip();
             return true;
-        }
-        else if (scene.FindByType<EnemyShip>(out _))
+        } 
+        if (!scene.FindByType<EnemyShip>(out _))
         {
             createdEntity = new EnemyShip();
+            return true;
+        }
+        if (!scene.FindByType<Background>(out _))
+        {
+            createdEntity = new Background();
             return true;
         }
         createdEntity = null;

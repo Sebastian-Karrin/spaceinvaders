@@ -27,7 +27,7 @@ public class Scene
 
     public void UpdateAll(float deltatime) //Uppdaterar allting i entities listan
     {
-       loader.LoadScene(this);
+       loader.HandleSceneChange(this);
         for (int i = entities.Count - 1; i >= 0; i--)
         {
             Entity entity = entities[i];
