@@ -14,7 +14,7 @@ public class Actor : Entity
 
     protected Vector2f originalPosition;
     
-    public Actor() : base("sheet", "")
+    public Actor() : base("sheet")
     {
         
         Position = new Vector2f();

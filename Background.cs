@@ -8,7 +8,7 @@ public class Background : Entity
 {
     public Vector2f direction = new Vector2f(0, 1);
     
-    public Background() : base("darkPurple", "pixel-font")
+    public Background() : base("darkPurple")
     {
        
         sprite.Position = new Vector2f(0,0);

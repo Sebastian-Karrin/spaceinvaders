@@ -6,7 +6,7 @@ namespace SpaceInvaders;
 
 public class GUI : Entity
 {
-    public GUI() : base("", "kenvector_future_thin")
+    public GUI() : base("")
     {
         
     }

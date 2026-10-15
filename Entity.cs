@@ -11,7 +11,7 @@ public class Entity
     protected readonly Sprite sprite;
     public bool isDead;
 
-    protected Entity(string textureName, string fontName)
+    protected Entity(string textureName)
     {
         this.fontName = fontName;
         this.textureName = textureName;
