@@ -6,12 +6,14 @@ namespace SpaceInvaders;
 
 public class Entity
 {
+    private readonly string fontName;
     private readonly string textureName;
     protected readonly Sprite sprite;
     public bool isDead;
 
-    protected Entity(string textureName)
+    protected Entity(string textureName, string fontName)
     {
+        this.fontName = fontName;
         this.textureName = textureName;
         sprite = new Sprite();
         isDead = false;
@@ -35,6 +37,7 @@ public class Entity
     public virtual void Create(Scene scene)
     {
         sprite.Texture = scene.assets.LoadTexture(textureName);
+        
     }
 
     public virtual void Destroy(Scene scene)

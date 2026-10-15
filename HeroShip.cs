@@ -7,19 +7,52 @@ namespace SpaceInvaders;
 
 public class HeroShip : Actor
 {
-    public Vector2f direction = new Vector2f(1, 1) / MathF.Sqrt(2.0f);
-    
-    public HeroShip() : base("playerShip1_blue")
+    public override void Create(Scene scene)
     {
-        sprite.Origin = new Vector2f(0,0);
+        speed = 100.0f;
+        base.Create(scene);
+        sprite.TextureRect = new IntRect(0, 912, 112, 84);
+        sprite.Origin = new Vector2f(66,42);
         sprite.Position = new Vector2f(500, 500);
     }
 
+    protected override int PickDirection(Scene scene)
+    {
+        int dir = direction;
+       
+        if (Keyboard.IsKeyPressed(Keyboard.Key.Up))
+        {
+            dir = 1;
+            isMoving = true;
+        }
+
+        if (Keyboard.IsKeyPressed(Keyboard.Key.Down))
+        {
+            dir = 3;
+            isMoving = true;
+        }
+
+        if (Keyboard.IsKeyPressed(Keyboard.Key.Right))
+        {
+            dir = 0;
+            isMoving = true;
+        }
+
+        if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
+        {
+            dir = 2;
+            isMoving = true;
+        }
+
+        if (!isDead) return dir;
+        return direction;
+    }
+
+
     public override void Update(Scene scene, float deltatime)
     {
-       var newpos = sprite.Position;
-       newpos += direction * deltatime * 100.0f;
-       sprite.Position = newpos;
+       
+      
     }
 
     public override void Render(RenderTarget target)

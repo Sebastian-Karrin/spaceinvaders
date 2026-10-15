@@ -1,4 +1,5 @@
-﻿using SFML.Graphics;
+﻿using Platformer;
+using SFML.Graphics;
 using SFML.Window;
 using SFML.System;
 

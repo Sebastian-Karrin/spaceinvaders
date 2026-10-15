@@ -4,7 +4,10 @@ using SFML.System;
 
 namespace SpaceInvaders;
 
-public class GUI
+public class GUI : Entity
 {
-    
+    public GUI() : base("", "kenvector_future_thin")
+    {
+        
+    }
 }

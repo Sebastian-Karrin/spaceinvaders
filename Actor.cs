@@ -9,12 +9,14 @@ public class Actor : Entity
     protected float speed;
     protected int direction;
     public string textureName2;
+    public bool shooting;
+    public bool isMoving;
 
     protected Vector2f originalPosition;
     
-    public Actor(string textureName2) : base($"{textureName2}")
+    public Actor() : base("sheet", "")
     {
-        this.textureName2 = textureName2;
+        
         Position = new Vector2f();
     }
 
@@ -26,6 +28,10 @@ public class Actor : Entity
         if (dir == 3) return new Vector2f(0,1); //Ner
         return new Vector2f(0, 0); //Stilla, om nåt går fel.
     }
+
+    
+    
+    protected virtual int PickDirection(Scene scene) { return 0;}
 
     public override void Create(Scene scene)
     {

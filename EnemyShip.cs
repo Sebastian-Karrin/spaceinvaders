@@ -6,11 +6,14 @@ namespace SpaceInvaders;
 
 public class EnemyShip : Actor
 {
-    public Vector2f direction = new Vector2f(1, 1) / MathF.Sqrt(2.0f);
-    
-    public EnemyShip() : base("enemyBlack3")
+
+    public override void Create(Scene scene)
     {
+        speed = 90.0f;
+        base.Create(scene);
         sprite.Position = new Vector2f(300,300);
+        sprite.TextureRect = new IntRect(144, 156, 102, 84);
+        sprite.Origin = new Vector2f(51, 42);
     }
 
     public override void Render(RenderTarget target)
@@ -26,7 +29,6 @@ public class EnemyShip : Actor
             Console.WriteLine("din mamma");
         }
         var newpos = sprite.Position;
-        newpos += direction * deltatime * 100.0f;
         sprite.Position = newpos;
     }
 }
